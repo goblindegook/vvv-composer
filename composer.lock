@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e3ce8f48ebd211a3ccfa10b0e1d44360",
+    "hash": "b11834f39d78be17da20494c4fac8d11",
     "packages": [
         {
             "name": "composer/installers",
@@ -148,12 +148,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/goblindegook/Syllables.git",
-                "reference": "1fd12cb4011c4d3cbc70b105ca880484b60e4cf9"
+                "reference": "f69c148b0e39d2556bd194ba69e9c95181713d8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/goblindegook/Syllables/zipball/1fd12cb4011c4d3cbc70b105ca880484b60e4cf9",
-                "reference": "1fd12cb4011c4d3cbc70b105ca880484b60e4cf9",
+                "url": "https://api.github.com/repos/goblindegook/Syllables/zipball/f69c148b0e39d2556bd194ba69e9c95181713d8d",
+                "reference": "f69c148b0e39d2556bd194ba69e9c95181713d8d",
                 "shasum": ""
             },
             "require": {
@@ -165,7 +165,7 @@
                 "apigen/apigen": "4.0.0-RC4",
                 "phpunit/phpunit": "*@stable"
             },
-            "type": "wordpress-muplugin",
+            "type": "wordpress-plugin",
             "autoload": {
                 "psr-4": {
                     "Syllables\\": "src/"
@@ -189,7 +189,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2015-02-01 15:41:20"
+            "time": "2015-02-02 02:05:07"
         },
         {
             "name": "wordpress",
@@ -754,7 +754,6 @@
         "goblindegook/syllables": 20
     },
     "prefer-stable": false,
-    "prefer-lowest": false,
     "platform": [],
     "platform-dev": []
 }
