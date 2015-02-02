@@ -1,0 +1,22 @@
+*~
+.DS_Store
+.svn
+.cvs
+*.bak
+*.log
+*.swp
+Thumbs.db
+
+# Exclude dependencies
+
+/content/*
+/vendor/*
+/wp/*
+/index.php
+/wp-config.php
+
+# Allowed files
+
+!/content/mu-plugins/*.php
+!/content/plugins/index.php
+!/content/themes/index.php

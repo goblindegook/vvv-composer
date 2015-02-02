@@ -1,0 +1,14 @@
+path: wp
+url: http://wordpress-composer.dev
+user: admin
+core config:
+    dbuser: wp
+    dbpass: wp
+core install:
+    url: wordpress-composer.dev
+    title: WordPress Composer
+    admin_user: admin
+    admin_password: password
+    admin_email: hello@goblindegook.net
+require:
+  - vendor/autoload.php
