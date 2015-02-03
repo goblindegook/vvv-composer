@@ -9,32 +9,25 @@
 
 namespace net\goblindegook\WP\Muddle;
 
+require_once ABSPATH . 'wp-admin/includes/plugin.php';
+
 /**
  * Load must-use plugins.
  */
 add_action( 'muplugins_loaded', function () {
-	$cache_key = 'muddle_plugin_cache';
+	$cache_key          = 'muddle_plugin_cache';
 
-	if ( should_flush_cache() ) {
+	$should_flush_cache = isset( $_SERVER['REQUEST_URI'] ) &&
+		strpos( $_SERVER['REQUEST_URI'], '/wp-admin/plugins.php' ) !== false;
+
+	if ( $should_flush_cache ) {
 		delete_site_transient( $cache_key );
 	}
 
-    foreach ( get_mu_plugins( $cache_key ) as $plugin ) {
-        include_once WPMU_PLUGIN_DIR . '/' . $plugin;
-    }
+	foreach ( get_mu_plugins( $cache_key ) as $plugin ) {
+		include_once WPMU_PLUGIN_DIR . '/' . $plugin;
+	}
 } );
-
-/**
- * Determines whether the must-use plugins cache should be flushed.
- *
- * Cache is cleared whenever a user views the plugins admin page.
- * 
- * @return boolean Whether the cache should be flushed.
- */
-function should_flush_cache() {
-	return isset( $_SERVER['REQUEST_URI'] ) &&
-		strpos( $_SERVER['REQUEST_URI'], '/wp-admin/plugins.php' ) !== false;
-}
 
 /**
  * Get list of must-use plugins residing in subdirectories.
@@ -42,7 +35,7 @@ function should_flush_cache() {
  * @param  string $cache_key Cache key to store plugins under.
  * @return array             List of plugin files to load.
  */
-function get_mu_plugins( $cache_key ) {
+function get_mu_plugins( $cache_key = 'muddle_plugin_cache' ) {
 	$plugins = get_site_transient( $cache_key );
 
 	if ( is_array( $plugins ) ) {
@@ -58,19 +51,15 @@ function get_mu_plugins( $cache_key ) {
 		}
 	}
 
-    if ( ! function_exists( '\get_plugins' ) ) {
-        require_once ABSPATH . 'wp-admin/includes/plugin.php';
-    }
+	$plugins = array();
 
-    $plugins = array();
+	foreach ( array_keys( \get_plugins( '/../mu-plugins/' ) ) as $plugin ) {
+		if ( dirname( $plugin ) !== '.' ) {
+			$plugins[] = $plugin;
+		}
+	}
 
-    foreach ( array_keys( \get_plugins( '/../mu-plugins/' ) ) as $plugin ) {
-    	if ( dirname( $plugin ) !== '.' ) {
-    		$plugins[] = $plugin;
-    	}
-    }
+	set_site_transient( $cache_key, $plugins );
 
-    set_site_transient( $cache_key, $plugins );
-
-    return $plugins;
+	return $plugins;
 }
