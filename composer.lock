@@ -4,20 +4,20 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b11834f39d78be17da20494c4fac8d11",
+    "hash": "5e3f41a237596f29b77ae1b0356c9a74",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.0.20",
+            "version": "v1.0.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "1bff8aa77a18f3616f468ed8000cf86a5725bac3"
+                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/1bff8aa77a18f3616f468ed8000cf86a5725bac3",
-                "reference": "1bff8aa77a18f3616f468ed8000cf86a5725bac3",
+                "url": "https://api.github.com/repos/composer/installers/zipball/d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
+                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
                 "shasum": ""
             },
             "replace": {
@@ -63,6 +63,7 @@
                 "Thelia",
                 "WolfCMS",
                 "agl",
+                "aimeos",
                 "annotatecms",
                 "bitrix",
                 "cakephp",
@@ -98,7 +99,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2015-01-11 03:51:11"
+            "time": "2015-02-18 17:17:01"
         },
         {
             "name": "fancyguy/webroot-installer",
@@ -148,12 +149,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/goblindegook/Syllables.git",
-                "reference": "f69c148b0e39d2556bd194ba69e9c95181713d8d"
+                "reference": "0af9089405e0429404bdc6b382c3a11f8b8c649d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/goblindegook/Syllables/zipball/f69c148b0e39d2556bd194ba69e9c95181713d8d",
-                "reference": "f69c148b0e39d2556bd194ba69e9c95181713d8d",
+                "url": "https://api.github.com/repos/goblindegook/Syllables/zipball/0af9089405e0429404bdc6b382c3a11f8b8c649d",
+                "reference": "0af9089405e0429404bdc6b382c3a11f8b8c649d",
                 "shasum": ""
             },
             "require": {
@@ -189,14 +190,14 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2015-02-02 02:05:07"
+            "time": "2015-02-16 02:22:57"
         },
         {
             "name": "wordpress",
-            "version": "4.1",
+            "version": "4.1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/WordPress/WordPress/archive/4.1.zip",
+                "url": "https://github.com/WordPress/WordPress/archive/4.1.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -227,15 +228,15 @@
         },
         {
             "name": "wpackagist-plugin/black-studio-tinymce-widget",
-            "version": "2.2.2",
+            "version": "2.2.3",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/black-studio-tinymce-widget/",
-                "reference": "tags/2.2.2"
+                "reference": "tags/2.2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/black-studio-tinymce-widget.2.2.2.zip",
+                "url": "http://downloads.wordpress.org/plugin/black-studio-tinymce-widget.2.2.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -247,15 +248,15 @@
         },
         {
             "name": "wpackagist-plugin/jetpack",
-            "version": "3.3",
+            "version": "3.4",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/jetpack/",
-                "reference": "tags/3.3"
+                "reference": "tags/3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/jetpack.3.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/jetpack.3.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -306,26 +307,6 @@
             "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
         },
         {
-            "name": "wpackagist-plugin/types",
-            "version": "1.6.4",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/types/",
-                "reference": "tags/1.6.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/types.1.6.4.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/types/"
-        },
-        {
             "name": "wpackagist-plugin/user-switching",
             "version": "1.0.3",
             "source": {
@@ -367,15 +348,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "1.7.1",
+            "version": "1.7.4",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/1.7.1"
+                "reference": "tags/1.7.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/wordpress-seo.1.7.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.1.7.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -481,21 +462,24 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v2.6.3",
+            "version": "v2.6.5",
             "target-dir": "Symfony/Component/Stopwatch",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Stopwatch.git",
-                "reference": "e8da5286132ba75ce4b4275fbf0f4cd369bfd71c"
+                "reference": "ba4e774f71e2ce3e3f65cabac4031b9029972af5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Stopwatch/zipball/e8da5286132ba75ce4b4275fbf0f4cd369bfd71c",
-                "reference": "e8da5286132ba75ce4b4275fbf0f4cd369bfd71c",
+                "url": "https://api.github.com/repos/symfony/Stopwatch/zipball/ba4e774f71e2ce3e3f65cabac4031b9029972af5",
+                "reference": "ba4e774f71e2ce3e3f65cabac4031b9029972af5",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7"
             },
             "type": "library",
             "extra": {
@@ -524,7 +508,7 @@
             ],
             "description": "Symfony Stopwatch Component",
             "homepage": "http://symfony.com",
-            "time": "2015-01-03 08:01:59"
+            "time": "2015-02-24 11:52:21"
         },
         {
             "name": "wpackagist-plugin/debug-bar",
@@ -628,15 +612,15 @@
         },
         {
             "name": "wpackagist-plugin/query-monitor",
-            "version": "2.6.9",
+            "version": "2.7.1",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/query-monitor/",
-                "reference": "tags/2.6.9"
+                "reference": "tags/2.7.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/query-monitor.2.6.9.zip",
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.2.7.1.zip",
                 "reference": null,
                 "shasum": null
             },

@@ -19,9 +19,9 @@
             "package": {
                 "name": "wordpress",
                 "type": "webroot",
-                "version": "4.1",
+                "version": "4.1.1",
                 "dist": {
-                    "url": "https://github.com/WordPress/WordPress/archive/4.1.zip",
+                    "url": "https://github.com/WordPress/WordPress/archive/4.1.1.zip",
                     "type": "zip"
                 },
                 "require": {
@@ -38,7 +38,6 @@
         "wpackagist-plugin/jetpack": "~3.3",
         "wpackagist-plugin/members": "~0.2",
         "wpackagist-plugin/regenerate-thumbnails": "~2.2",
-        "wpackagist-plugin/types": "~1.6",
         "wpackagist-plugin/user-switching": "~1.0",
         "wpackagist-plugin/wordpress-importer": "~0.6",
         "wpackagist-plugin/wordpress-seo": "~1.7",
