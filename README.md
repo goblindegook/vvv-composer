@@ -8,6 +8,6 @@ Clone this repository into the _www_ directory of your VVV install and reprovisi
 
 ```
 $ cd path/to/vvv/www
-$ git clone https://github.com/goblindegook/wordpress-composer
+$ git clone https://github.com/goblindegook/vvv-composer.git
 $ vagrant provision
 ```
