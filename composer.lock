@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5e3f41a237596f29b77ae1b0356c9a74",
+    "hash": "5d3e36713e7415c6edd01f8aaabc2c21",
     "packages": [
         {
             "name": "composer/installers",
@@ -102,48 +102,6 @@
             "time": "2015-02-18 17:17:01"
         },
         {
-            "name": "fancyguy/webroot-installer",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fancyguy/webroot-installer.git",
-                "reference": "a2d5c2e149d837e5580a62a91d3c91577aa30d28"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fancyguy/webroot-installer/zipball/a2d5c2e149d837e5580a62a91d3c91577aa30d28",
-                "reference": "a2d5c2e149d837e5580a62a91d3c91577aa30d28",
-                "shasum": ""
-            },
-            "require-dev": {
-                "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "3.7.*"
-            },
-            "type": "composer-installer",
-            "extra": {
-                "class": "FancyGuy\\Composer\\WebrootInstaller"
-            },
-            "autoload": {
-                "psr-0": {
-                    "FancyGuy\\Composer\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Steve Buzonas",
-                    "email": "steve@fancyguy.com",
-                    "homepage": "http://www.stevebuzonas.com"
-                }
-            ],
-            "description": "A composer installer for libraries that live in an application webroot.",
-            "homepage": "http://fancyguy.github.com/webroot-installer/",
-            "time": "2013-03-15 17:51:14"
-        },
-        {
             "name": "goblindegook/syllables",
             "version": "dev-master",
             "source": {
@@ -193,30 +151,98 @@
             "time": "2015-02-16 02:22:57"
         },
         {
-            "name": "wordpress",
-            "version": "4.1.1",
+            "name": "johnpbloch/wordpress",
+            "version": "4.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnpbloch/wordpress.git",
+                "reference": "998358f3b7a2c75caae11ff3c79e514951aac7f6"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/WordPress/WordPress/archive/4.1.1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/998358f3b7a2c75caae11ff3c79e514951aac7f6",
+                "reference": "998358f3b7a2c75caae11ff3c79e514951aac7f6",
+                "shasum": ""
             },
             "require": {
-                "fancyguy/webroot-installer": "~1.1"
+                "johnpbloch/wordpress-core-installer": "~0.2",
+                "php": ">=5.3.2"
             },
-            "type": "webroot"
+            "type": "wordpress-core",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "WordPress Community",
+                    "homepage": "http://wordpress.org/about/"
+                }
+            ],
+            "description": "WordPress is web software you can use to create a beautiful website or blog.",
+            "homepage": "http://wordpress.org/",
+            "keywords": [
+                "blog",
+                "cms"
+            ],
+            "time": "2015-05-07 01:46:09"
+        },
+        {
+            "name": "johnpbloch/wordpress-core-installer",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnpbloch/wordpress-core-installer.git",
+                "reference": "a4c08e91be99e858c7778c2f52a4d73820147c2e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core-installer/zipball/a4c08e91be99e858c7778c2f52a4d73820147c2e",
+                "reference": "a4c08e91be99e858c7778c2f52a4d73820147c2e",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "1.0.0"
+            },
+            "conflict": {
+                "composer/installers": "<1.0.6"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "johnpbloch\\Composer\\WordPressCorePlugin"
+            },
+            "autoload": {
+                "psr-0": {
+                    "johnpbloch\\Composer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "John P. Bloch",
+                    "email": "me@johnpbloch.com"
+                }
+            ],
+            "description": "A custom installer to handle deploying WordPress with composer",
+            "time": "2013-09-09 15:04:54"
         },
         {
             "name": "wpackagist-plugin/autoptimize",
-            "version": "1.9.2",
+            "version": "1.9.4",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/autoptimize/",
-                "reference": "tags/1.9.2"
+                "reference": "tags/1.9.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/autoptimize.1.9.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/autoptimize.1.9.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -236,7 +262,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/black-studio-tinymce-widget.2.2.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/black-studio-tinymce-widget.2.2.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -248,15 +274,15 @@
         },
         {
             "name": "wpackagist-plugin/jetpack",
-            "version": "3.4",
+            "version": "3.5.3",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/jetpack/",
-                "reference": "tags/3.4"
+                "reference": "tags/3.5.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/jetpack.3.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/jetpack.3.5.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -276,7 +302,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/members.0.2.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/members.0.2.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -296,7 +322,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/regenerate-thumbnails.2.2.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/regenerate-thumbnails.2.2.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -308,15 +334,15 @@
         },
         {
             "name": "wpackagist-plugin/user-switching",
-            "version": "1.0.3",
+            "version": "1.0.5",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/user-switching/",
-                "reference": "tags/1.0.3"
+                "reference": "tags/1.0.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/user-switching.1.0.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/user-switching.1.0.5.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -336,7 +362,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/wordpress-importer.0.6.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -370,23 +396,24 @@
     "packages-dev": [
         {
             "name": "mustache/mustache",
-            "version": "v2.7.0",
+            "version": "v2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/mustache.php.git",
-                "reference": "fdf41dd673dc99b41d60992470dbae94ae0b6ba1"
+                "reference": "64c28cc73e01d5edcef7de8cb2b16782615f648a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/fdf41dd673dc99b41d60992470dbae94ae0b6ba1",
-                "reference": "fdf41dd673dc99b41d60992470dbae94ae0b6ba1",
+                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/64c28cc73e01d5edcef7de8cb2b16782615f648a",
+                "reference": "64c28cc73e01d5edcef7de8cb2b16782615f648a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.4"
             },
             "require-dev": {
-                "phpunit/phpunit": "*"
+                "fabpot/php-cs-fixer": "~1.6",
+                "phpunit/phpunit": "~3.7|~4.0"
             },
             "type": "library",
             "autoload": {
@@ -411,7 +438,7 @@
                 "mustache",
                 "templating"
             ],
-            "time": "2014-08-26 19:50:10"
+            "time": "2015-04-01 06:37:33"
         },
         {
             "name": "rarst/laps",
@@ -462,17 +489,17 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v2.6.5",
+            "version": "v2.6.6",
             "target-dir": "Symfony/Component/Stopwatch",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Stopwatch.git",
-                "reference": "ba4e774f71e2ce3e3f65cabac4031b9029972af5"
+                "reference": "5f196e84b5640424a166d2ce9cca161ce1e9d912"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Stopwatch/zipball/ba4e774f71e2ce3e3f65cabac4031b9029972af5",
-                "reference": "ba4e774f71e2ce3e3f65cabac4031b9029972af5",
+                "url": "https://api.github.com/repos/symfony/Stopwatch/zipball/5f196e84b5640424a166d2ce9cca161ce1e9d912",
+                "reference": "5f196e84b5640424a166d2ce9cca161ce1e9d912",
                 "shasum": ""
             },
             "require": {
@@ -508,7 +535,7 @@
             ],
             "description": "Symfony Stopwatch Component",
             "homepage": "http://symfony.com",
-            "time": "2015-02-24 11:52:21"
+            "time": "2015-03-22 16:55:57"
         },
         {
             "name": "wpackagist-plugin/debug-bar",
@@ -520,7 +547,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/debug-bar.0.8.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/debug-bar.0.8.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -540,7 +567,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/debug-bar-extender.zip",
+                "url": "https://downloads.wordpress.org/plugin/debug-bar-extender.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -560,7 +587,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/genesis-visual-hook-guide.zip",
+                "url": "https://downloads.wordpress.org/plugin/genesis-visual-hook-guide.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -580,7 +607,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/log-deprecated-notices.0.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/log-deprecated-notices.0.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -600,7 +627,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/piglatin.zip",
+                "url": "https://downloads.wordpress.org/plugin/piglatin.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -612,15 +639,15 @@
         },
         {
             "name": "wpackagist-plugin/query-monitor",
-            "version": "2.7.1",
+            "version": "2.7.4",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/query-monitor/",
-                "reference": "tags/2.7.1"
+                "reference": "tags/2.7.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/query-monitor.2.7.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.2.7.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -640,7 +667,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/rewrite-rules-inspector.1.2.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/rewrite-rules-inspector.1.2.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -660,7 +687,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/what-the-file.1.4.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/what-the-file.1.4.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -680,7 +707,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/wp-crontrol.1.2.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-crontrol.1.2.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -700,7 +727,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/wp-mail-smtp.0.9.5.zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.0.9.5.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -720,7 +747,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/wp-redis.0.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-redis.0.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -734,10 +761,11 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "wordpress": 0,
+        "johnpbloch/wordpress": 0,
         "goblindegook/syllables": 20
     },
     "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": [],
     "platform-dev": []
 }

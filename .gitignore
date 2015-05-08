@@ -17,6 +17,7 @@ Thumbs.db
 
 # Allowed files
 
+!/content/index.php
 !/content/mu-plugins/*.php
 !/content/plugins/index.php
 !/content/themes/index.php

@@ -13,29 +13,13 @@
         "wpackagist": {
             "type": "composer",
             "url": "http://wpackagist.org"
-        },
-        "wordpress": {
-            "type": "package",
-            "package": {
-                "name": "wordpress",
-                "type": "webroot",
-                "version": "4.1.1",
-                "dist": {
-                    "url": "https://github.com/WordPress/WordPress/archive/4.1.1.zip",
-                    "type": "zip"
-                },
-                "require": {
-                    "fancyguy/webroot-installer": "~1.1"
-                }
-            }
         }
     },
     "require": {
-        "fancyguy/webroot-installer": "~1.1",
-        "wordpress": "@stable",
+        "johnpbloch/wordpress": "@stable",
         "wpackagist-plugin/autoptimize": "~1.9",
         "wpackagist-plugin/black-studio-tinymce-widget": "~2.2",
-        "wpackagist-plugin/jetpack": "~3.3",
+        "wpackagist-plugin/jetpack": "~3.5",
         "wpackagist-plugin/members": "~0.2",
         "wpackagist-plugin/regenerate-thumbnails": "~2.2",
         "wpackagist-plugin/user-switching": "~1.0",
@@ -47,7 +31,7 @@
         "wpackagist-plugin/debug-bar": "~0.8",
         "wpackagist-plugin/genesis-visual-hook-guide": "~0.9",
         "wpackagist-plugin/piglatin": "~0.2",
-        "wpackagist-plugin/query-monitor": "~2.6",
+        "wpackagist-plugin/query-monitor": "~2.7",
         "wpackagist-plugin/rewrite-rules-inspector": "~1.2",
         "wpackagist-plugin/what-the-file": "~1.4",
         "wpackagist-plugin/wp-crontrol": "~1.2",
@@ -59,9 +43,11 @@
     },
     "extra": {
         "installer-paths": {
-            "content/mu-plugins/{$name}/": [
-                "type:wordpress-muplugin",
+            "vendor/{$vendor}/{$name}/": [
                 "goblindegook/syllables"
+            ],
+            "content/mu-plugins/{$name}/": [
+                "type:wordpress-muplugin"
             ],
             "content/plugins/{$name}/": [
                 "type:wordpress-plugin"
@@ -70,7 +56,6 @@
                 "type:wordpress-theme"
             ]
         },
-        "webroot-dir": "wp",
-        "webroot-package": "wordpress"
+        "wordpress-install-dir": "wp"
     }
 }
