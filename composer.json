@@ -24,7 +24,7 @@
         "wpackagist-plugin/regenerate-thumbnails": "~2.2",
         "wpackagist-plugin/user-switching": "~1.0",
         "wpackagist-plugin/wordpress-importer": "~0.6",
-        "wpackagist-plugin/wordpress-seo": "~1.7",
+        "wpackagist-plugin/wordpress-seo": "~2.1",
         "goblindegook/syllables": "dev-master"
     },
     "require-dev": {
@@ -39,7 +39,8 @@
         "wpackagist-plugin/wp-redis": "~0.1",
         "wpackagist-plugin/debug-bar-extender": "~0.5",
         "wpackagist-plugin/log-deprecated-notices": "~0.3",
-        "rarst/laps": "~1.2"
+        "rarst/laps": "~1.2",
+        "wpackagist-plugin/wp-hydra": "~1.0"
     },
     "extra": {
         "installer-paths": {
