@@ -14,6 +14,7 @@ Thumbs.db
 /wp/*
 /index.php
 /wp-config.php
+composer.lock
 
 # Allowed files
 
