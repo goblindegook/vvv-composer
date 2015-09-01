@@ -9,8 +9,9 @@ Thumbs.db
 
 # Exclude dependencies
 
-/content/*
-/vendor/*
+/content/plugins/*
+/content/themes/*
+vendor/*
 /wp/*
 /index.php
 /wp-config.php
