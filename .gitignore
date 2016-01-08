@@ -10,6 +10,8 @@ Thumbs.db
 # Exclude dependencies
 
 /content/*
+/content/plugins/*
+/content/themes/*
 /vendor/*
 /wp/*
 /index.php
@@ -19,6 +21,6 @@ composer.lock
 # Allowed files
 
 !/content/index.php
-!/content/mu-plugins/*.php
+!/content/mu-plugins/*
 !/content/plugins/index.php
 !/content/themes/index.php
