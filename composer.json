@@ -18,14 +18,12 @@
     "require": {
         "goblindegook/syllables": "dev-master",
         "johnpbloch/wordpress": "@stable",
-        "wpackagist-plugin/autoptimize": "~1.9",
+        "wpackagist-plugin/autoptimize": "~2.0",
         "wpackagist-plugin/black-studio-tinymce-widget": "~2.2",
-        "wpackagist-plugin/jetpack": "~3.5",
-        "wpackagist-plugin/members": "~0.2",
+        "wpackagist-plugin/members": "~1.0",
         "wpackagist-plugin/regenerate-thumbnails": "~2.2",
-        "wpackagist-plugin/user-switching": "~1.0",
         "wpackagist-plugin/wordpress-importer": "~0.6",
-        "wpackagist-plugin/wordpress-seo": "~2.1"
+        "wpackagist-plugin/wordpress-seo": "~3.0"
     },
     "require-dev": {
         "rarst/laps": "~1.2",
@@ -36,10 +34,10 @@
         "wpackagist-plugin/piglatin": "~0.2",
         "wpackagist-plugin/query-monitor": "~2.7",
         "wpackagist-plugin/rewrite-rules-inspector": "~1.2",
+        "wpackagist-plugin/user-switching": "~1.0",
         "wpackagist-plugin/what-the-file": "~1.4",
         "wpackagist-plugin/wp-crontrol": "~1.2",
-        "wpackagist-plugin/wp-hydra": "~1.0",
-        "wpackagist-plugin/wp-redis": "~0.1"
+        "wpackagist-plugin/wp-hydra": "~1.0"
     },
     "extra": {
         "installer-paths": {

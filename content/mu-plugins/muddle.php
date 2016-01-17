@@ -14,17 +14,17 @@ require_once ABSPATH . 'wp-admin/includes/plugin.php';
 /**
  * Load must-use plugins.
  */
-add_action( 'muplugins_loaded', function () {
-	$cache_key          = 'muddle_plugin_cache';
+\add_action( 'muplugins_loaded', function () {
+	$cache_key = 'muddle_plugin_cache';
 
 	$should_flush_cache = isset( $_SERVER['REQUEST_URI'] ) &&
 		strpos( $_SERVER['REQUEST_URI'], '/wp-admin/plugins.php' ) !== false;
 
 	if ( $should_flush_cache ) {
-		delete_site_transient( $cache_key );
+		\delete_site_transient( $cache_key );
 	}
 
-	foreach ( get_mu_plugins( $cache_key ) as $plugin ) {
+	foreach ( \get_mu_plugins( $cache_key ) as $plugin ) {
 		include_once WPMU_PLUGIN_DIR . '/' . $plugin;
 	}
 } );
@@ -36,7 +36,7 @@ add_action( 'muplugins_loaded', function () {
  * @return array             List of plugin files to load.
  */
 function get_mu_plugins( $cache_key = 'muddle_plugin_cache' ) {
-	$plugins = get_site_transient( $cache_key );
+	$plugins = \get_site_transient( $cache_key );
 
 	if ( is_array( $plugins ) ) {
 		foreach ( $plugins as $plugin ) {
@@ -59,7 +59,7 @@ function get_mu_plugins( $cache_key = 'muddle_plugin_cache' ) {
 		}
 	}
 
-	set_site_transient( $cache_key, $plugins );
+	\set_site_transient( $cache_key, $plugins );
 
 	return $plugins;
 }

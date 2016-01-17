@@ -4,19 +4,25 @@
 
 DATABASE="wordpress_composer"
 
+## FUNCTIONS ##
+
+noroot() {
+  sudo -EH -u vagrant HTTP_HOST="${SITE_HOST}" "$@";
+}
+
 ## PROVISIONING ##
 
 echo "Setting up a local WordPress project for development..."
 
-composer update
+noroot composer update
 
 if [ ! -f "index.php" ]; then
-    cat >"index.php" <<PHP
+    noroot cat >"index.php" <<PHP
 <?php require dirname( __FILE__ ) . '/wp/index.php';
 PHP
 fi
 
-if ! $(wp core is-installed); then
+if ! $(noroot wp core is-installed); then
 
     echo " * Creating database schema ${DATABASE}"
 
@@ -27,12 +33,10 @@ if ! $(wp core is-installed); then
 
     WP_CACHE_KEY_SALT=`date +%s | sha256sum | head -c 64`
 
-    wp core config --dbname="${DATABASE}" --extra-php <<PHP
+    noroot wp core config --dbname="${DATABASE}" --extra-php <<PHP
 
 define( 'WP_CACHE', true );
 define( 'WP_CACHE_KEY_SALT', '$WP_CACHE_KEY_SALT' );
-
-\$redis_server = array( 'host' => '127.0.0.1', 'port' => 6379 );
 
 define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_LOG', true );
@@ -58,31 +62,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 PHP
 
-    mv wp/wp-config.php .
+    noroot mv wp/wp-config.php .
 
-    wp core install
+    noroot wp core install
 
     echo " * Setting additional options"
 
-    HOMEURL=$(wp option get home)
-    wp option update siteurl "$HOMEURL/wp"
-    wp option update permalink_structure "/%postname%/"
-
-    ## OBJECT CACHE ##
-
-    echo " * Setting up object cache"
-
-    sudo apt-get -y install redis-server php5-redis
-    sudo service php5-fpm restart
-    cp content/plugins/wp-redis/object-cache.php content/object-cache.php
-    touch content/advanced-cache.php
+    HOMEURL=$(noroot wp option get home)
+    noroot wp option update siteurl "$HOMEURL/wp"
+    noroot wp option update permalink_structure "/%postname%/"
 
     echo " * Importing test content"
 
-    curl -OLs https://raw.githubusercontent.com/manovotny/wptest/master/wptest.xml
-    wp plugin activate wordpress-importer
-    wp import wptest.xml --authors=create
-    rm wptest.xml
+    noroot curl -OLs https://raw.githubusercontent.com/manovotny/wptest/master/wptest.xml
+    noroot wp plugin activate wordpress-importer
+    noroot wp import wptest.xml --authors=create
+    noroot rm wptest.xml
 fi
 
 echo "All done!"

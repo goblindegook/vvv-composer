@@ -18,11 +18,12 @@ vendor/*
 /wp/*
 /index.php
 /wp-config.php
-composer.lock
 
 # Allowed files
 
 !/content/index.php
-!/content/mu-plugins/*
+!/content/mu-plugins/autoload.php
+!/content/mu-plugins/index.php
+!/content/mu-plugins/muddle.php
 !/content/plugins/index.php
 !/content/themes/index.php
