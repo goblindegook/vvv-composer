@@ -1,16 +1,23 @@
 #!/bin/bash
 
-## CONFIGURATION ##
-
-DATABASE="wordpress_composer"
-
 ## FUNCTIONS ##
 
 noroot() {
   sudo -EH -u vagrant HTTP_HOST="${SITE_HOST}" "$@";
 }
 
+get_yaml() {
+  local yaml=$1
+  local key=$2
+  local s='[[:space:]]*'
+  local w='[a-zA-Z0-9_]*'
+
+  sed -n "s/^$s$key$s:$s\($w\)$s$/\1/ p" "$yaml"
+}
+
 ## PROVISIONING ##
+
+DATABASE=$(get_yaml "wp-cli.local.yml" dbname)
 
 echo "Setting up a local WordPress project for development..."
 
@@ -33,7 +40,7 @@ if ! $(noroot wp core is-installed); then
 
     WP_CACHE_KEY_SALT=`date +%s | sha256sum | head -c 64`
 
-    noroot wp core config --dbname="${DATABASE}" --extra-php <<PHP
+    noroot wp core config --extra-php <<PHP
 
 define( 'WP_CACHE', true );
 define( 'WP_CACHE_KEY_SALT', '$WP_CACHE_KEY_SALT' );

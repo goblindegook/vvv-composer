@@ -4,6 +4,7 @@ user: admin
 core config:
     dbuser: wp
     dbpass: wp
+    dbname: wordpress_composer
 core install:
     url: wordpress-composer.dev
     title: WordPress Composer
