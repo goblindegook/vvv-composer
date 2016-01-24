@@ -6,18 +6,17 @@ noroot() {
   sudo -EH -u vagrant HTTP_HOST="${SITE_HOST}" "$@";
 }
 
-get_yaml() {
-  local yaml=$1
-  local key=$2
+get_config() {
+  local key=$1
   local s='[[:space:]]*'
   local w='[a-zA-Z0-9_]*'
 
-  sed -n "s/^$s$key$s:$s\($w\)$s$/\1/ p" "$yaml"
+  sed -n "s/^$s$key$s:$s\($w\)$s$/\1/ p" "wp-cli.yml"
 }
 
 ## PROVISIONING ##
 
-DATABASE=$(get_yaml "wp-cli.local.yml" dbname)
+DATABASE=$(get_config dbname)
 
 echo "Setting up a local WordPress project for development..."
 
