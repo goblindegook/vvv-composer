@@ -23,7 +23,9 @@
         "wpackagist-plugin/members": "~1.0",
         "wpackagist-plugin/regenerate-thumbnails": "~2.2",
         "wpackagist-plugin/wordpress-importer": "~0.6",
-        "wpackagist-plugin/wordpress-seo": "~3.0"
+        "wpackagist-plugin/wordpress-seo": "~3.0",
+        "composer-plugin-api": "^1.0",
+        "roots/wp-password-bcrypt": "^1.0"
     },
     "require-dev": {
         "rarst/laps": "~1.2",
