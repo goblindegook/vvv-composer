@@ -1,12 +1,12 @@
 path: wp
-url: http://wordpress-composer.dev
+url: http://composer.wordpress.dev
 user: admin
 core config:
     dbuser: wp
     dbpass: wp
     dbname: wordpress_composer
 core install:
-    url: wordpress-composer.dev
+    url: composer.wordpress.dev
     title: WordPress Composer
     admin_user: admin
     admin_password: password
