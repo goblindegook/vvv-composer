@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d6de137399785869b5f1f351e0e03c71",
-    "content-hash": "507eed5755be5c14629a49c19c108ddf",
+    "hash": "9e73215816368f940326f8d053bcdf30",
+    "content-hash": "38465b7c787ae90c4d3aa3c1e2b2f1ba",
     "packages": [
         {
             "name": "composer/installers",
@@ -243,6 +243,48 @@
             "time": "2015-06-11 15:15:30"
         },
         {
+            "name": "markjaquith/wp-tlc-transients",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/markjaquith/WP-TLC-Transients.git",
+                "reference": "bdbe0691db6adaf08af0dee6c70ebebe881633d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/markjaquith/WP-TLC-Transients/zipball/bdbe0691db6adaf08af0dee6c70ebebe881633d8",
+                "reference": "bdbe0691db6adaf08af0dee6c70ebebe881633d8",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "class-tlc-transient.php",
+                    "class-tlc-transient-update-server.php"
+                ],
+                "files": [
+                    "functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Jaquith",
+                    "homepage": "http://markjaquith.com/"
+                }
+            ],
+            "description": "A WP transients interface with support for soft-expiration, background updating of the transients.",
+            "homepage": "https://github.com/markjaquith/WP-TLC-Transients",
+            "keywords": [
+                "cache",
+                "wordpress"
+            ],
+            "time": "2013-05-07 18:12:10"
+        },
+        {
             "name": "roots/wp-password-bcrypt",
             "version": "1.0.0",
             "source": {
@@ -300,6 +342,50 @@
             "time": "2016-03-01 16:27:06"
         },
         {
+            "name": "shelob9/jp-rest-cache",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Shelob9/jp-rest-cache.git",
+                "reference": "63d73c02748b203596b2b8f0754d4f8bfbe84f64"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Shelob9/jp-rest-cache/zipball/63d73c02748b203596b2b8f0754d4f8bfbe84f64",
+                "reference": "63d73c02748b203596b2b8f0754d4f8bfbe84f64",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0.0",
+                "markjaquith/wp-tlc-transients": "^1.0",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "jp-rest-cache.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Josh Pollock",
+                    "homepage": "http://JoshPress.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Soft-expiring, server-side cache  for the WordPress REST API (WP REST).",
+            "keywords": [
+                "api",
+                "cache",
+                "wordpress"
+            ],
+            "time": "2016-04-30 01:58:14"
+        },
+        {
             "name": "wpackagist-plugin/autoptimize",
             "version": "2.0.2",
             "source": {
@@ -310,7 +396,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/autoptimize.2.0.2.zip",
-                "reference": null,
+                "reference": "tags/2.0.2",
                 "shasum": null
             },
             "require": {
@@ -330,7 +416,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/black-studio-tinymce-widget.2.2.9.zip",
-                "reference": null,
+                "reference": "tags/2.2.9",
                 "shasum": null
             },
             "require": {
@@ -350,7 +436,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/members.1.1.1.zip",
-                "reference": null,
+                "reference": "tags/1.1.1",
                 "shasum": null
             },
             "require": {
@@ -370,7 +456,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/regenerate-thumbnails.2.2.6.zip",
-                "reference": null,
+                "reference": "tags/2.2.6",
                 "shasum": null
             },
             "require": {
@@ -378,6 +464,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
+        },
+        {
+            "name": "wpackagist-plugin/rest-api",
+            "version": "2.0-beta13",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/rest-api/",
+                "reference": "tags/2.0-beta13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/rest-api.2.0-beta13.zip",
+                "reference": "tags/2.0-beta13",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/rest-api/"
         },
         {
             "name": "wpackagist-plugin/wordpress-importer",
@@ -390,7 +496,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.2.zip",
-                "reference": null,
+                "reference": "tags/0.6.2",
                 "shasum": null
             },
             "require": {
@@ -410,7 +516,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wordpress-seo.3.2.5.zip",
-                "reference": null,
+                "reference": "tags/3.2.5",
                 "shasum": null
             },
             "require": {
@@ -574,7 +680,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/debug-bar.0.8.4.zip",
-                "reference": null,
+                "reference": "tags/0.8.4",
                 "shasum": null
             },
             "require": {
@@ -594,7 +700,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/debug-bar-extender.zip",
-                "reference": null,
+                "reference": "trunk",
                 "shasum": null
             },
             "require": {
@@ -614,7 +720,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/genesis-visual-hook-guide.zip",
-                "reference": null,
+                "reference": "trunk",
                 "shasum": null
             },
             "require": {
@@ -634,7 +740,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/log-deprecated-notices.0.3.zip",
-                "reference": null,
+                "reference": "tags/0.3",
                 "shasum": null
             },
             "require": {
@@ -654,7 +760,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/piglatin.zip",
-                "reference": null,
+                "reference": "trunk",
                 "shasum": null
             },
             "require": {
@@ -674,7 +780,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/query-monitor.2.11.0.zip",
-                "reference": null,
+                "reference": "tags/2.11.0",
                 "shasum": null
             },
             "require": {
@@ -694,7 +800,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/rewrite-rules-inspector.1.2.1.zip",
-                "reference": null,
+                "reference": "tags/1.2.1",
                 "shasum": null
             },
             "require": {
@@ -714,7 +820,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/user-switching.1.0.9.zip",
-                "reference": null,
+                "reference": "tags/1.0.9",
                 "shasum": null
             },
             "require": {
@@ -734,7 +840,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/what-the-file.1.5.3.zip",
-                "reference": null,
+                "reference": "tags/1.5.3",
                 "shasum": null
             },
             "require": {
@@ -754,7 +860,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wp-crontrol.1.3.zip",
-                "reference": null,
+                "reference": "tags/1.3",
                 "shasum": null
             },
             "require": {
@@ -774,7 +880,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wp-hydra.1.1.zip",
-                "reference": null,
+                "reference": "tags/1.1",
                 "shasum": null
             },
             "require": {
@@ -785,12 +891,14 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "goblindegook/syllables": 20,
-        "johnpbloch/wordpress": 0
+        "johnpbloch/wordpress": 0,
+        "wpackagist-plugin/rest-api": 10,
+        "shelob9/jp-rest-cache": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": []
