@@ -159,16 +159,16 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.5",
+            "version": "4.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "a975896d0806f3dc1ccf3e170f91226440b267cb"
+                "reference": "e992d00a34ea84d55c80023d27d5bcb839069add"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/a975896d0806f3dc1ccf3e170f91226440b267cb",
-                "reference": "a975896d0806f3dc1ccf3e170f91226440b267cb",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/e992d00a34ea84d55c80023d27d5bcb839069add",
+                "reference": "e992d00a34ea84d55c80023d27d5bcb839069add",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
                 "blog",
                 "cms"
             ],
-            "time": "2016-04-12 17:46:20"
+            "time": "2016-05-06 18:16:20"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -381,15 +381,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-importer",
-            "version": "0.6.1",
+            "version": "0.6.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-importer/",
-                "reference": "tags/0.6.1"
+                "reference": "tags/0.6.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -401,15 +401,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "3.2.3",
+            "version": "3.2.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/3.2.3"
+                "reference": "tags/3.2.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.3.2.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.3.2.5.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -516,7 +516,7 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v2.8.4",
+            "version": "v2.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
@@ -665,15 +665,15 @@
         },
         {
             "name": "wpackagist-plugin/query-monitor",
-            "version": "2.10.0",
+            "version": "2.11.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/query-monitor/",
-                "reference": "tags/2.10.0"
+                "reference": "tags/2.11.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/query-monitor.2.10.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.2.11.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -725,15 +725,15 @@
         },
         {
             "name": "wpackagist-plugin/what-the-file",
-            "version": "1.5.2",
+            "version": "1.5.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/what-the-file/",
-                "reference": "tags/1.5.2"
+                "reference": "tags/1.5.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/what-the-file.1.5.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/what-the-file.1.5.3.zip",
                 "reference": null,
                 "shasum": null
             },
